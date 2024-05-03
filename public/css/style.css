@@ -86,3 +86,23 @@ nav .dropdown ul li:hover {
 .switch input:checked + .switch label:active::before {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(0, 150, 136, 0.2);
 }
+
+#otp-form div{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+#otp-form input{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+#otp-form input::inner-spin-button{
+  display: none;
+}
+#otp-form input::-webkit-inner-spin-button{
+  display: none;
+}

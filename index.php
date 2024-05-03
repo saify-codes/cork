@@ -35,7 +35,7 @@ $routes = [
     /*Admin routes*/
     '/landlords' => ['file' => 'adminListLandLords.php', 'middleware' => ['authenticated', 'isAdmin']],
     '/contact' => ['file' => 'contact.php'],
-    '/ajax' => ['file' => 'ajax.php', 'middleware' => ['authenticated', 'isAdmin']],
+    '/ajax' => ['file' => 'ajax.php'],
 ];
 
 // Function to handle routes
