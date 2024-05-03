@@ -10,7 +10,6 @@ class Auth
         if ($stmt = $connection->prepare($sql)) {
             // Bind variables to the prepared statement as parameters
             $stmt->bind_param("s", $user_id);
-
             // Attempt to execute the prepared statement
             if ($stmt->execute()) {
                 $user = $stmt->get_result()->fetch_assoc();

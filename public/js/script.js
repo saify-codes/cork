@@ -18,15 +18,14 @@ $(document).ready(function () {
     $target.toggleClass('is-active');
   });
 
-  // Datatable.js
   $('#testimonials .switch input').change(function () {
     const testimonial_id = this.value
     const status = Number(this.checked)
     $.ajax({
-      url: '/testimonials', // The URL to which the request is sent
+      url: '/ajax', // The URL to which the request is sent
       method: 'POST',      // The HTTP method (GET, POST, PUT, DELETE, etc.)
       dataType: 'json',   // The expected data type of the response
-      data:{testimonial_id, status},
+      data:{testimonial_id, status, action: 'toggle_testimonial'},
       success: function (response) { // Callback function to handle successful response
         console.log('Data received:', response);
       },

@@ -1,23 +1,6 @@
 <?php
 
 $external_css = ['./public/css/dashboard.css'];
-// Processing form data when form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    $testimonial_id = trim($_POST['testimonial_id']);
-    $status = trim($_POST['status']);
-
-    if (isset($testimonial_id, $status)) {
-        $sql = "UPDATE testimonials SET approved = ? WHERE id = ?";
-        print $sql;
-        $stmt = $connection->prepare($sql);
-        $stmt->bind_param('ii', $status, $testimonial_id);
-        $stmt->execute();
-        $stmt->close();
-        exit;
-    }
-}
-
 $sql = "SELECT  *, testimonials.id from testimonials 
         JOIN users
         ON users.id = testimonials.user_id

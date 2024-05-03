@@ -2,7 +2,7 @@
 
 const host = "localhost";
 const user = "root";
-const password = "";
+const password = "karachi@123";
 const database = "cork";
 
 

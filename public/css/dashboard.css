@@ -18,7 +18,10 @@ main aside ul li {
 }
 main aside ul li:hover {
   background-color: #FFF;
-  color: #00D1B2;
+}
+
+main aside ul li:hover a {
+  color: #00D1B2 !important;
 }
 
 main .content {

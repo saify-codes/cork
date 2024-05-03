@@ -2,7 +2,7 @@
 
 $user = Auth::user();
 match ($user['role']) {
-    'ADMIN' => include 'admin/dashboard.php',
+    'ADMIN' => include 'admin/testimonial.php',
     'LAND LORD' => include 'land_lord/dashboard.php',
-    'TENANT' => include 'tenant/dashboard.php',
+    'TENANT' => include 'tenant/testimonial.php',
 };

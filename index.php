@@ -1,8 +1,10 @@
 <?php
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 
 // Start session
 session_start();
-
 require_once 'config/mysql_connection.php';
 require_once 'middleware/middleware.php';
 require_once 'helper/helper.php';
@@ -27,11 +29,13 @@ $routes = [
     
     /*Admin | Land lord | Tenant*/
     '/dashboard' => ['file' => 'dashboard.php', 'middleware' => ['authenticated']],
+    '/testimonials' => ['file' => 'testimonial.php', 'middleware' => ['authenticated']],
+
 
     /*Admin routes*/
     '/landlords' => ['file' => 'adminListLandLords.php', 'middleware' => ['authenticated', 'isAdmin']],
-    '/testimonials' => ['file' => 'adminTestimonials.php', 'middleware' => ['authenticated', 'isAdmin']],
     '/contact' => ['file' => 'contact.php'],
+    '/ajax' => ['file' => 'ajax.php', 'middleware' => ['authenticated', 'isAdmin']],
 ];
 
 // Function to handle routes

@@ -9,8 +9,8 @@ class Html{
     
     public static function switch($id , $checked = ''){
         echo "<div class='switch'>
-                <input type='checkbox' name='appproved' value='$id' hidden='hidden' id='switch' $checked>
-                <label for='switch'></label>
+                <input type='checkbox' name='appproved' value='$id' hidden='hidden' id='switch-$id' $checked>
+                <label for='switch-$id'></label>
             </div>";
     }
 }
